@@ -16,20 +16,24 @@ Languages
 =========
 
 To provide a Python solution, edit `solution.py`
+
 To provide a Java solution, edit `solution.java`
 
 Test cases
 ==========
 
 Inputs:
-    `(string) s = ">----<"`
+:`(string) s = ">----<"`
+
 Output:
-    `(int) 2`
+:`(int) 2`
+
 
 Inputs:
-    `(string) s = "<<>><"`
+:`(string) s = "<<>><"`
+
 Output:
-    `(int) 4`
+:`(int) 4`
     
 Solution
 ========
@@ -38,8 +42,13 @@ For this problem, we just need to count the number of interaction between people
 
 ## Correctness
 Let's assume that the number we get is wrong. There is someone, let's assume walking right, for whome the count is not right. This means that he will interact with someone walking left that is not on the right of the hallway (since we already counted those). This is absurd because they can't meet someone behind them.
+
 By symetry of the problem, we don't need to examine the case where the error would be for someone walking left.
+
 **Therefore, the algorithm is correct.**
+
 ## Time and space complexity
+
 We just keep track of the number of interaction, which is **o(1)** (space complexity).
+
 For the time complexity, we just go through the list and execute an operation that requires a constant time. The time complexity is **o(n)**. 

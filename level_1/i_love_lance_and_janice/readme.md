@@ -12,25 +12,33 @@ Languages
 =========
 
 To provide a Python solution, edit `solution.py`
+
 To provide a Java solution, edit `solution.java`
 
 Test cases
 ==========
 
 Inputs:
-    `(string) s = "wrw blf hvv ozhg mrtsg'h vkrhlwv?"`
+: `(string) s = "wrw blf hvv ozhg mrtsg'h vkrhlwv?"`
+
 Output:
-    `(string) "did you see last night's episode?"`
+: `(string) "did you see last night's episode?"`
+
 
 Inputs:
-    `(string) s = "Yvzs! I xzm'g yvorvev Lzmxv olhg srh qly zg gsv xlolmb!!"`
+: `(string) s = "Yvzs! I xzm'g yvorvev Lzmxv olhg srh qly zg gsv xlolmb!!"`
+
 Output:
-    `(string) "Yeah! I can't believe Lance lost his job at the colony!!"`
+: `(string) "Yeah! I can't believe Lance lost his job at the colony!!"`
 
 
 Solution
 ========
 
 This problem is about breaking a cipher.
+
 Luckily, this cipher is well known and one of the oldest ones: **Atbash Cipher**.
-_It was originally a monoalphabetic substitution cipher used for the Hebrew alphabet. It is one of the earliest known subtitution ciphers to have been used, and is very simple. However, it's simplicity is also it's biggest pitfall, as it does not use a key. Hence every piece of plaintext enciphered using the Atbash Cipher uses the same ciphertext alphabet, and so can be easily broken, since the encryption algorithm is known to all._ [(source)](http://crypto.interactive-maths.com/atbash-cipher.html)
+
+_It was originally a monoalphabetic substitution cipher used for the Hebrew alphabet.
+ It is one of the earliest known subtitution ciphers to have been used, and is very simple. However, it's simplicity is also it's biggest pitfall, as it does not use a key. 
+ Hence every piece of plaintext enciphered using the Atbash Cipher uses the same ciphertext alphabet, and so can be easily broken, since the encryption algorithm is known to all._ [(source)](http://crypto.interactive-maths.com/atbash-cipher.html)
