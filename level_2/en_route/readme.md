@@ -49,6 +49,6 @@ By symetry of the problem, we don't need to examine the case where the error wou
 
 ## Time and space complexity
 
-We just keep track of the number of interaction, which is **o(1)** (space complexity).
+We just keep track of the number of interaction, which is **`o(1)`** (space complexity).
 
-For the time complexity, we just go through the list and execute an operation that requires a constant time. The time complexity is **o(n)**. 
+For the time complexity, we just go through the list and execute an operation that requires a constant time. The time complexity is **`o(n)`**. 
