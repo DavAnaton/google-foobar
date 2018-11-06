@@ -38,54 +38,55 @@ Languages
 =========
 
 To provide a Python solution, edit `solution.py`
-
+<br>
 To provide a Java solution, edit `solution.java`
 
 Test cases
 ==========
 
-Inputs:
-:`(int) m = [[0, 2, 1, 0, 0], [0, 0, 0, 3, 4], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]`
+Inputs: `(int) m = [[0, 2, 1, 0, 0], [0, 0, 0, 3, 4], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]`
+<br>
+Output: `(int list) [7, 6, 8, 21]`
 
-Output:
-:`(int list) [7, 6, 8, 21]`
-
-Inputs:
-:`(int) m = [[0, 1, 0, 0, 0, 1], [4, 0, 0, 3, 2, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]`
-
-Output:
-:`(int list) [0, 3, 2, 9, 14]`
+Inputs: `(int) m = [[0, 1, 0, 0, 0, 1], [4, 0, 0, 3, 2, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]`
+<br>
+Output: `(int list) [0, 3, 2, 9, 14]`
 
 Solution
 ========
 I didn't think about Absorbing Markov Chains right away, so I started to try implementing something using Johnson to find all the cycles in the graph and reduce them to a simple edge.
-
+<br>
 I spent so much time on this solution, that I felt bad deleting it. It fails some of the test cases, but you can take a look if you had time to spend. :)
 
 The real solution implements Absorbing Markov Chains, as I said.
-
+<br>
 The way this works is that we will receive a graph that looks like this:
 ```
 |q(0, 0)   ...   q(0, n)   r(0, 0)   ...   r(0, m)|
 |  :::     ...     :::       :::     ...     :::  |
+|  :::     ...     :::       :::     ...     :::  |
 |q(n, 0)   ...   q(n, n)   r(n, 0)   ...   r(n, m)|
 |   0      ...      0         1      ...      0   |
 |  :::     ...     :::       :::     ...     :::  |
+|  :::     ...     :::       :::     ...     :::  |
 |   0      ...      0         0      ...      1   |
 ```
- and that represent the probability of a state to desintegrate in an another state (in the challenge, when a state doesn't desintegrate, they replace the self loop with no exiting edge).
+and that represent the probability of a state to desintegrate in an another state (in the challenge, when a state doesn't desintegrate, they replace the self loop with no exiting edge).
+<br>
+In order to solve the probabilities of a non-absorbing state to end up in an absorbing state, we need to compute `P = invert(I - Q) * R` where `I` is the matrix identity of size `n x n`.
+
+Since we start only with `state 0`, after we append the denominator the the end of `P[0]`, we will have the right answer.
  
- In order to solve the probabilities of a non-absorbing state to end up in an absorbing state, we need to compute `P = invert(I - Q) * R` where `I` is the matrix identity of size `n x n`.
- 
- Since we start only with `state 0`, after we append the denominator the the end of `P[0]`, we will have the right answer.
- 
- ## Time complexity
- My algorithm is **not** optimized. 
- 
- I just followed the basic formulas to calculate a determinant (complexity `o(n!)`), inverse a matrix (complexity `o(n^3)`)... for readability and to ensure that the code was actually written by me.  
- 
+## Time and space complexity
+
+### Space complexity
+Regarding the space complexity, given the matrices' sizes, I reached **`o(n * (n + m))`** 
+
+### Time complexity
+ My algorithm time complexity is **not** optimized. 
+ <br>
+ I just followed the basic formulas to calculate a determinant (complexity `o(n!)`), inverse a matrix (complexity `o(n^3)`)... for readability and to ensure that the code was actually written by me.
+ <br>
  By using `numpy` or any other optimized matrix computation librairy, the time complexity could have been more or less `o(m * n^2)` where `n` is the number of non-absorbing states and `m` the numver of absorbing states (`o(n^2.373)` to inverse `Q` and `o(m * n^2)` for the product of the result by `R`).
  
  Instead, my time complexity is **`o(n! + m * n^2)`**.
- 
- 

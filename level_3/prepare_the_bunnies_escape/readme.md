@@ -36,11 +36,15 @@ In order to achieve that, I used a BFS from the starting point, one from the end
 The correctness of this algorithm is **ensured by the correctness of the BFS**.
 
 ## Time and space complexity
-The  results of each BFS are stored in an array where each cell represents a vertex in the graph. 
+
+### Space complexity
+The  results of each BFS are stored in an array where each cell represents a vertex in the graph.
+
 Hence the space complexity: **`o(V)`**.
 
+### Time complexity
 We just run 2 BFS and go through those 2 arrays synchronously.
 <br>
 Each BFS is `o(E + V)` (`E` is the number of edges, `V` the number of vertices) and finding the minimum is `o(V)`.
-<br>
+
 Hence the final time complexity: **`o(E + V)`**.

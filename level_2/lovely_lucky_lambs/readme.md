@@ -21,26 +21,21 @@ Languages
 =========
 
 To provide a Python solution, edit `solution.py`
-
+<br>
 To provide a Java solution, edit `solution.java`
 
 Test cases
 ==========
 
-Inputs:
-:`(int) total_lambs = 10`
+Inputs: `(int) total_lambs = 10`
+<br>
+Output: `(int) 1`
 
-Output:
-:`(int) 1`
-
-
-Inputs:
-:`(int) total_lambs = 143`
-
-Output:
-:`(int) 3`
+Inputs: `(int) total_lambs = 143`
+<br>
+Output: `(int) 3`
     
-Solution and Mathematical proof
+Solution
 ========
 
 The solution for this problem is almost given by the problem itself; we have to:
@@ -48,20 +43,27 @@ The solution for this problem is almost given by the problem itself; we have to:
 - compute the generous case
 - return the difference
 
-## Stingy case
+## Correctness
+
+### Stingy case
 Now, when we take a closer look at the problem, we can see that the stingy case is obtained when we give the minimum to each henchman: the sum of the last 2 henchmen. Therefore, we will get the [Fibonacci serie](http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibFormula.html).
-
+<br>
 The sum of all the henchmen payrolls will be ![sum(f_i) for i between 0 and n](http://latex.codecogs.com/svg.latex?\inline&space;\sum_{i&space;=&space;0}^{n}f_i) with ![f_i](http://latex.codecogs.com/svg.latex?\inline&space;f_i) being the ![i^th](http://latex.codecogs.com/svg.latex?\inline&space;i^{th}) Fibonacci number.
-
+<br>
 However, ![this sum is equal to f_(n+2)](http://latex.codecogs.com/svg.latex?\inline&space;\sum_{i&space;=&space;0}^{n}f_i=f_{n+2}).
-
+<br>
 Therefore, we just have to find `n` such as ![f_(n+2) < total_lambs](http://latex.codecogs.com/svg.latex?\inline&space;f_{n&plus;2}<total\_.lambs) and  ![f_(n+3) > total_lambs](http://latex.codecogs.com/svg.latex?\inline&space;f_{n&plus;3}>total\_.lambs). 
 
 The total of paid henchmen will be `n`.
 
-## Generous case
+### Generous case
 We can also see that the maximum we can pay a henchman is 2 times what we paid the previous one. Therefore, the sum of all the payrolls will be ![sum(2^i) for i between 0 and n](http://latex.codecogs.com/svg.latex?\inline&space;\sum_{i&space;=&space;0}^n2^i) plus a little something if the last one can accept what remains after we paid this sum.
-
+<br>
 However, ![this sum equals 2^(n+1) - 1](http://latex.codecogs.com/svg.latex?\inline&space;\sum_{i&space;=&space;0}^n2^i=2^{n+1}-1).
 
 So, once we find the largest `n` such as ![2^(n+1) - 1 < total_lambs](http://latex.codecogs.com/svg.latex?\inline&space;2^{n+1}-1<total\_.lambs), we will just have to check if the difference between those 2 terms is inferior to ![2^n + 2^(n-1)](http://latex.codecogs.com/svg.latex?\inline&space;2^n+2^{n-1}) to determine is the answer is `n` or `n+1`.
+
+## Time and space complexity
+All the computation and variables are just on integers, without any loop.
+
+The time and space complexity both are **`o(1)`**.

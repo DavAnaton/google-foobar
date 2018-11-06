@@ -16,39 +16,41 @@ Languages
 =========
 
 To provide a Python solution, edit `solution.py`
-
+<br>
 To provide a Java solution, edit `solution.java`
 
 Test cases
 ==========
 
-Inputs:
-:`(string) s = ">----<"`
+Inputs: `(string) s = ">----<"`
+<br>
+Output: `(int) 2`
 
-Output:
-:`(int) 2`
-
-
-Inputs:
-:`(string) s = "<<>><"`
-
-Output:
-:`(int) 4`
+Inputs: `(string) s = "<<>><"`
+<br>
+Output: `(int) 4`
     
 Solution
 ========
 
-For this problem, we just need to count the number of interaction between people walking right and people walking left. If we take the hallway from left to right, we just have to keep a count of the people walking right, and add this number to the total interactions number when we encounter someone walking left. The number of times the employees will salute will be twice the number of interactions.
+For this problem, we just need to count the number of interaction between people walking right and people walking left.
+
+If we take the hallway from left to right, we just have to keep a count of the people walking right, and add this number to the total interactions number when we encounter someone walking left. The number of times the employees will salute will be twice the number of interactions.
 
 ## Correctness
-Let's assume that the number we get is wrong. There is someone, let's assume walking right, for whome the count is not right. This means that he will interact with someone walking left that is not on the right of the hallway (since we already counted those). This is absurd because they can't meet someone behind them.
-
+Let's assume that the number we get is wrong. There is someone, let's assume walking right, for whome the count is not right.
+This means that he will interact with someone walking left that is not on the right of the hallway (since we already counted those).
+<br>
+This is absurd because they can't meet someone behind them.
+<br>
 By symetry of the problem, we don't need to examine the case where the error would be for someone walking left.
 
 **Therefore, the algorithm is correct.**
 
 ## Time and space complexity
 
-We just keep track of the number of interaction, which is **`o(1)`** (space complexity).
+### Space complexity
+We just keep track of the number of interaction, which is **`o(1)`**.
 
+### Time complexity
 For the time complexity, we just go through the list and execute an operation that requires a constant time. The time complexity is **`o(n)`**. 
