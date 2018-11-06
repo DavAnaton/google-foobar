@@ -46,17 +46,17 @@ Test cases
 ==========
 
 Inputs:
-:`(int) n = 3`
+: `(int) n = 3`
 
 Output:
-:`(int) 1`
+: `(int) 1`
 
 
 Inputs:
-:`(int) n = 200`
+: `(int) n = 200`
 
 Output:
-:`(int) 487067745`
+: `(int) 487067745`
 
 Solution
 ========
