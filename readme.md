@@ -14,6 +14,7 @@ Amongst the different skills and knowledge that were tested, you can find:
   - Common Algorithms (BFS, DFS, Kosaraju, Johnson, ...)
   - Deeper Algorithms understanding (Ability to divide complex problems in many small problem, and to combine well-known algorithms with personal algorithm knowledge, like augmenting paths, to solve them)
   - Dynamic Programming
+  - [Cellular Automaton](http://www.cs.tau.ac.il/~nachumd/models/CA.pdf)
 
 In order to work with a Test Driven Development, I created a ```create_check_function.py``` with a general function to verify test cases. By importing this module, I get a ```check_function``` that is called with the following parameters ```[any] test_cases, [any] expected, (function) answer_function``` and gives another function. When called with no parameter, this last one checks all the test cases and by passing in an index, we can check just one relevant test case, for easier development. 
 Each folder will then have a ```test.py``` file that will implement the test for each challenge. Each folder will also have a ```readme.txt``` that describes the problem as Google gave it to me, and a ```solution.py``` that solves the problem. 
