@@ -13,4 +13,4 @@ expected = [
 	11567,
 ]
 
-create.check_function(test_cases, expected, solution.answer)(0)
+create.check_function(test_cases, expected, solution.answer)()

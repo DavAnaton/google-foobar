@@ -63,3 +63,49 @@ Output: `(int) 254`
 Inputs: `(boolean) g = [[true, true, false, true, false, true, false, true, true, false], [true, true, false, false, false, false, true, true, true, false], [true, true, false, false, false, false, false, false, false, true], [false, true, false, false, false, false, true, true, false, false]]`
 <br>
 Output: `(int) 11567`
+
+Solution
+========
+
+When I started this challenge, I had no idea what Cellular Automaton was. 
+<br>
+I dived in the code trying to build something that would work with dynamic programming by counting the number of previous states for the one with the most choices (bottom-right) and iterates over the whole matrix.
+<br>
+The problem I kept facing, obviously, is that my algorithm didn't have any memory of what the possible states where made of and this information was crucial.
+
+Stuck, I decided to Google something like "cells neighbours overtime computer science" to learn about Cellular Automaton.
+<br>
+I learn that the system I had to deal with was non-reversible and outer totalistic.
+<br>
+However, I didn't find any information that helped me to calculate the number of previous states of a non-reversible system.
+
+I then decided to just brute-force my way to the solution.
+
+The main idea of my algorithm is to compute for each line the ancestors that could have given this line, compare with the previous line which ones make sense, then merge the solutions for each line together with the rest.
+<br>
+To find the total number of solution, I just need to count them.
+
+The algorithm worked but could be optimized.
+
+My optimization came from the fact that each line only influence the one that is under it. Hence, once this line's ancestors are merged with the ancestors of the one under, it becomes useless and takes a lot of space in the memory. 
+<br>
+I then decided to get rid of them and merge the similar ancestors that remained. In order to do that I kept track of how many times each line was obtained.
+<br>
+The final result was, then, only the sum of occurences of last line's ancestors.
+
+## Space and time complexity
+The case where each cell has the most ancestors is when they're all without gas; that's the one we will study here.
+
+In order to save some space, my algorithm needed the current state to be transpose before I started working on it.
+
+### Space complexity
+The width of the transposed graph is not larger than `9`.
+<br>
+Each cell has `12` ancestors but, once you selected an acestor for the first cell, the second cell can only have between `0` and `4` possible ancestors. The number of possible previous states is mutiplied by `4` with every cell we take into consideration and we consider at most 2 lines at the same time.
+<br>
+The number of previous state is inferior to ![4^(2\*w)](http://latex.codecogs.com/svg.latex?\inline&space;4^{2*w}).
+
+The space complexity is **`o(2^w)`**.
+
+### Time complexity
+\*TODO\*
