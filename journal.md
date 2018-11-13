@@ -40,3 +40,38 @@ LEVEL 5
 Oh no! You escaped Commander Lambda's exploding space station - but so did she, and she's definitely not happy with you. She's chasing you in her heavily-armed starfighter, while you and your bunny refugees are stuck in these lumbering escape pods. It'll take all your wits and cleverness to escape such a hare-y situation, so you'd better hop to it!
 
 It's not regulation, but you think if you can bypass the compressor, you can squeeze a few extra bursts of speed out of this escape pod.
+
+EPILOGUE
+========
+```
+       /@     /@                                     /@     /@                                    /@     /@
+      @~/@    @@                                    @~/@    @@                                   @~/@    @@
+     @~~/ %  @$%@                                  @~~/ %  @$%@                                 @~~/ %  @$%@
+     @~((((%%////@                                 @~((((%%////@                                @~((((%%////@
+     @((////@~//~~@                                @((////@~//~~@                               @((////@~//~~@
+     @(// @//////@                                 @(// @//////@                                @(// @//////@
+      @//% @~~~/~@                                  @//% @~~~/~@                                 @//% @~~~/~@
+     /@$$$ @///~~/@                                /@$$$ @///~~/@                               /@$$$ @///~~/@
+    @          //@@                               @          //@@                              @          //@@
+   @      //@@@ /~ @                             @      //@@@ /~ @                            @      //@@@ /~ @
+  @$     //@   @  ///@                          @$     //@   @  ///@                         @$     //@   @  ///@
+  @$        @@@   //%%@                         @$        @@@   //%%@                        @$        @@@   //%%@
+  @                ((//                 @@@@@   @                ((//                 @@@@@  @                ((//                 @@@@@
+   @ ~           (((((((((/@@/       //@    @@   @ ~           (((((((((/@@/       //@    @@  @ ~           (((((((((/@@/       //@    @@
+    @~              %    ~~~~~~/    /@$      ¢@@   @~              %   ~~~~~~/    /@$     ¢@@  @~             %    ~~~~~~/    /@$      ¢@@
+       @@/@@/$             ~~~~///////$       ¢@      @@/@@/$             ~~~~///////$      ¢@     @@/@@/$            ~~~~///////$       ¢@
+           //@@@%%/~~      ~~~~~~~~///@     ¢@@          //@@@%%/~~      ~~~~~~~~///@     ¢@@         //@@@%%/~~      ~~~~~~~~///@      ¢@@
+            ~~~               ~~~~~~//////@$@@             ~~~               ~~~~~~//////@$@@            ~~~              ~~~~~~//////@$@@
+       $$$                      ~~~~((((/////@        $$$                     ~~~~((((/////@      $$$                     ~~~~((((/////@
+      $~~~~ %%%   /           ~~~~(//////(($@       $~~~~ %%%   /           ~~~~(//////(($@      $~~~~ %%%   /           ~~~~(//////(($@
+      @$$~~ @   $$            ~~~~((((((%%%@        @$$~~ @   $$            ~~~~((((((%%%@       @$$~~ @   $$            ~~~~((((((%%%@
+        \\@@@@               (((((((%%%%%@           \\@@@@                (((((((%%%%%@          \\@@@@                (((((((%%%%%@
+          @@@@              $$$$$$$$$@                 @@@@                 $$$$$$$$$@              @@@@                $$$$$$$$$@
+                            $$$%%%%%%@                                    $$$%%%%%%@                                   $$$%%%%%%@
+                          $$%%%%%%%%@                                   $$%%%%%%%%@                                  $$%%%%%%%%@
+                   @ ///   $$%%%%%%@                             @ ///   $$%%%%%%@                           @ ///   $$%%%%%%@
+                 @////        @@@@@                            @////        @@@@@                           @////        @@@@@
+                   @////@@@@@@@@@                                @////@@@@@@@@@                              @////@@@@@@@@@
+```
+
+With one last roar of the escape pod's engines, you and your bunny companions jump to lightspeed. Congratulations! You've destroyed the LAMBCHOP, rescued the bunnies, gotten Commander Lambda off your tail, and saved the galaxy. Time for a little rest and relaxation back on Bunny Planet. Pat yourself on the back - you've earned it!
