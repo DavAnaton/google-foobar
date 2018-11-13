@@ -9,7 +9,7 @@ Amongst the different skills and knowledge that were tested, you can find:
   - Atbash cipher
   - Basic Mathematical Knowledge (Fibonacci sequence, Combinations & Permutations,...)
   - Deeper Mathematical Knowledge (Linear Algebra, Absorbing Markov Chains, ...)
-  - Greedy algorith
+  - Greedy algorithms
   - Basic Algorithms understanding (Ability to write a few lines of code to solve a simple problem)
   - Common Algorithms (BFS, DFS, Kosaraju, Johnson, ...)
   - Deeper Algorithms understanding (Ability to divide complex problems in many small problem, and to combine well-known algorithms with personal algorithm knowledge, like augmenting paths, to solve them)
