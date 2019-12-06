@@ -24,3 +24,4 @@ Each folder will then have a ```test.py``` file that will implement the test for
   - Maybe ```level_4/free_the_bunny_prisoners``` needs a proof of correctness. The algorithm uses combinations and is very simple and straight forward but the proof is harder to write down. 
   - ```level_5/expanding_nebula``` needs to have its time complexity calculated.
   - If you also took the foobar challenge and had a challenge that is not on the list, I would love it if you could send me the ```readme.txt``` so I can have one more.
+  - Add Solution in Readme and tests for level_6. 
